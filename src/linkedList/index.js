@@ -25,6 +25,9 @@ LinkedList.prototype.add = function(item) {
 
 LinkedList.prototype.remove = function(data) {
   let current = this.head
+  if(!current)
+    return false
+
   if(current.data === data) {
     this.head = current.next
     this.length--
@@ -82,6 +85,14 @@ LinkedList.prototype.toString = function() {
 
   return result.trim()
 }
+
+const list = new LinkedList()
+list.add(1)
+console.log(list.toString())
+list.remove(1)
+list.remove(1)
+list.remove(1)
+console.log(list.toString())
 
 export {
   LinkedList,
