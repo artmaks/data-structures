@@ -86,14 +86,6 @@ LinkedList.prototype.toString = function() {
   return result.trim()
 }
 
-const list = new LinkedList()
-list.add(1)
-console.log(list.toString())
-list.remove(1)
-list.remove(1)
-list.remove(1)
-console.log(list.toString())
-
 export {
   LinkedList,
 }
